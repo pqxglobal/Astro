@@ -6,7 +6,7 @@ export interface Props {
   text?: string;
   showExtra?: boolean;
 }
-const { heading = "Welcome To The Astro Crash Course!", text="Build super fast HTML-first websites using your favorite JavaScript frameworks", showExtra = false } = Astro.props as Props;
+const { heading = "Welcome Manon To The Astro Crash Course!", text="Build super fast HTML-first websites using your favorite JavaScript frameworks", showExtra = false } = Astro.props as Props;
 ---
 
 <section class="showcase">
@@ -19,11 +19,16 @@ const { heading = "Welcome To The Astro Crash Course!", text="Build super fast H
 
   {showExtra && <>
     <div class="showcase-img">
-    <img class="logos" src={logos} alt="" />
+    <img class="logos" src={logos} alt="" usemap="#workmap"/>
+
+    <map name="workmap">
+      <area shape="rect" coords="" href="" alt="">  
+    </map>
+
     <img class="logos-small" src={logosSmall} alt="" />
   </div>
   <p class="showcase-demo">
-    <small>This is a demo website used for the YouTube crash course</small>
+    <small>This is a demo website used for the Astro crash course from Traversy Media</small>
   </p>
   </>}
 </section>
